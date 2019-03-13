@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://DAO/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://DAO/">
+
+<xs:element name="atualizarEspecializacao" type="tns:atualizarEspecializacao"/>
+
+<xs:element name="atualizarEspecializacaoResponse" type="tns:atualizarEspecializacaoResponse"/>
+
+<xs:element name="consultarEspecializacaoPorID" type="tns:consultarEspecializacaoPorID"/>
+
+<xs:element name="consultarEspecializacaoPorIDResponse" type="tns:consultarEspecializacaoPorIDResponse"/>
+
+<xs:element name="deleteEspecializacao" type="tns:deleteEspecializacao"/>
+
+<xs:element name="deleteEspecializacaoResponse" type="tns:deleteEspecializacaoResponse"/>
+
+<xs:element name="existeRegistroPorIdEspecializacao" type="tns:existeRegistroPorIdEspecializacao"/>
+
+<xs:element name="existeRegistroPorIdEspecializacaoResponse" type="tns:existeRegistroPorIdEspecializacaoResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="inserirEspecializacao" type="tns:inserirEspecializacao"/>
+
+<xs:element name="inserirEspecializacaoResponse" type="tns:inserirEspecializacaoResponse"/>
+
+<xs:complexType name="atualizarEspecializacao">
+<xs:sequence>
+<xs:element name="espCod" type="xs:int"/>
+<xs:element name="medCod" type="xs:int"/>
+<xs:element name="espAnoEspecializacao" type="xs:string" minOccurs="0"/>
+<xs:element name="espeCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atualizarEspecializacaoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultarEspecializacaoPorID">
+<xs:sequence>
+<xs:element name="espeCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultarEspecializacaoPorIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:especializacaoVO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="especializacaoVO">
+<xs:sequence>
+<xs:element name="espAnoEspecializacao" type="xs:string" minOccurs="0"/>
+<xs:element name="espCod" type="xs:int"/>
+<xs:element name="espeCod" type="xs:int"/>
+<xs:element name="medCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEspecializacao">
+<xs:sequence>
+<xs:element name="espeCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteEspecializacaoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserirEspecializacao">
+<xs:sequence>
+<xs:element name="espCod" type="xs:int"/>
+<xs:element name="medCod" type="xs:int"/>
+<xs:element name="espAnoEspecializacao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserirEspecializacaoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existeRegistroPorIdEspecializacao">
+<xs:sequence>
+<xs:element name="espeCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existeRegistroPorIdEspecializacaoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

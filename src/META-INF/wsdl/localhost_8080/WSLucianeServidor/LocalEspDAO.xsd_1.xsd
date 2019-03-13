@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://DAO/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://DAO/">
+
+<xs:element name="atualizarLocalEsp" type="tns:atualizarLocalEsp"/>
+
+<xs:element name="atualizarLocalEspResponse" type="tns:atualizarLocalEspResponse"/>
+
+<xs:element name="consultarEspecialidadePorID" type="tns:consultarEspecialidadePorID"/>
+
+<xs:element name="consultarEspecialidadePorIDResponse" type="tns:consultarEspecialidadePorIDResponse"/>
+
+<xs:element name="deleteLocalEsp" type="tns:deleteLocalEsp"/>
+
+<xs:element name="deleteLocalEspResponse" type="tns:deleteLocalEspResponse"/>
+
+<xs:element name="existeRegistroPorIdLocalEsp" type="tns:existeRegistroPorIdLocalEsp"/>
+
+<xs:element name="existeRegistroPorIdLocalEspResponse" type="tns:existeRegistroPorIdLocalEspResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="inserirLocalEsp" type="tns:inserirLocalEsp"/>
+
+<xs:element name="inserirLocalEspResponse" type="tns:inserirLocalEspResponse"/>
+
+<xs:complexType name="deleteLocalEsp">
+<xs:sequence>
+<xs:element name="espCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteLocalEspResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atualizarLocalEsp">
+<xs:sequence>
+<xs:element name="espNome" type="xs:string" minOccurs="0"/>
+<xs:element name="espInstituicao" type="xs:string" minOccurs="0"/>
+<xs:element name="espCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atualizarLocalEspResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existeRegistroPorIdLocalEsp">
+<xs:sequence>
+<xs:element name="espCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existeRegistroPorIdLocalEspResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultarEspecialidadePorID">
+<xs:sequence>
+<xs:element name="espCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultarEspecialidadePorIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:localEsp" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localEsp">
+<xs:sequence>
+<xs:element name="espInstituicao" type="xs:string" minOccurs="0"/>
+<xs:element name="espNome" type="xs:string" minOccurs="0"/>
+<xs:element name="especialidadeCod" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserirLocalEsp">
+<xs:sequence>
+<xs:element name="espNome" type="xs:string" minOccurs="0"/>
+<xs:element name="espInstituicao" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserirLocalEspResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

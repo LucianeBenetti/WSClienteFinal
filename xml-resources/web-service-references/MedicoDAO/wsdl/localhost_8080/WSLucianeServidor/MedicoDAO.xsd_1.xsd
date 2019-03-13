@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://DAO/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://DAO/">
+
+<xs:element name="atualizarMedico" type="tns:atualizarMedico"/>
+
+<xs:element name="atualizarMedicoResponse" type="tns:atualizarMedicoResponse"/>
+
+<xs:element name="consultarMedicoPorCRM" type="tns:consultarMedicoPorCRM"/>
+
+<xs:element name="consultarMedicoPorCRMResponse" type="tns:consultarMedicoPorCRMResponse"/>
+
+<xs:element name="deleteMedico" type="tns:deleteMedico"/>
+
+<xs:element name="deleteMedicoResponse" type="tns:deleteMedicoResponse"/>
+
+<xs:element name="existeRegistroPorCpf" type="tns:existeRegistroPorCpf"/>
+
+<xs:element name="existeRegistroPorCpfResponse" type="tns:existeRegistroPorCpfResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="inserirMedico" type="tns:inserirMedico"/>
+
+<xs:element name="inserirMedicoResponse" type="tns:inserirMedicoResponse"/>
+
+<xs:complexType name="existeRegistroPorCpf">
+<xs:sequence>
+<xs:element name="cpf" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existeRegistroPorCpfResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultarMedicoPorCRM">
+<xs:sequence>
+<xs:element name="crm" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="consultarMedicoPorCRMResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:medico" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="medico">
+<xs:sequence>
+<xs:element name="bairro" type="xs:string" minOccurs="0"/>
+<xs:element name="cel" type="xs:string" minOccurs="0"/>
+<xs:element name="celMensagem" type="xs:string" minOccurs="0"/>
+<xs:element name="cep" type="xs:string" minOccurs="0"/>
+<xs:element name="cidade" type="xs:string" minOccurs="0"/>
+<xs:element name="cnpj" type="xs:string" minOccurs="0"/>
+<xs:element name="complemento" type="xs:string" minOccurs="0"/>
+<xs:element name="cpf" type="xs:string" minOccurs="0"/>
+<xs:element name="crm" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="logradouro" type="xs:string" minOccurs="0"/>
+<xs:element name="medNome" type="xs:string" minOccurs="0"/>
+<xs:element name="medicoCod" type="xs:int"/>
+<xs:element name="numLog" type="xs:string" minOccurs="0"/>
+<xs:element name="uf" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserirMedico">
+<xs:sequence>
+<xs:element name="medNome" type="xs:string" minOccurs="0"/>
+<xs:element name="crm" type="xs:string" minOccurs="0"/>
+<xs:element name="celMen" type="xs:string" minOccurs="0"/>
+<xs:element name="cel" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="cpf" type="xs:string" minOccurs="0"/>
+<xs:element name="cnpj" type="xs:string" minOccurs="0"/>
+<xs:element name="logradouro" type="xs:string" minOccurs="0"/>
+<xs:element name="numLog" type="xs:string" minOccurs="0"/>
+<xs:element name="complemento" type="xs:string" minOccurs="0"/>
+<xs:element name="bairro" type="xs:string" minOccurs="0"/>
+<xs:element name="cidade" type="xs:string" minOccurs="0"/>
+<xs:element name="uf" type="xs:string" minOccurs="0"/>
+<xs:element name="cep" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inserirMedicoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteMedico">
+<xs:sequence>
+<xs:element name="cpf" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteMedicoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atualizarMedico">
+<xs:sequence>
+<xs:element name="medNome" type="xs:string" minOccurs="0"/>
+<xs:element name="crm" type="xs:string" minOccurs="0"/>
+<xs:element name="celMen" type="xs:string" minOccurs="0"/>
+<xs:element name="cel" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="cpf" type="xs:string" minOccurs="0"/>
+<xs:element name="cnpj" type="xs:string" minOccurs="0"/>
+<xs:element name="logradouro" type="xs:string" minOccurs="0"/>
+<xs:element name="numLog" type="xs:string" minOccurs="0"/>
+<xs:element name="complemento" type="xs:string" minOccurs="0"/>
+<xs:element name="bairro" type="xs:string" minOccurs="0"/>
+<xs:element name="cidade" type="xs:string" minOccurs="0"/>
+<xs:element name="uf" type="xs:string" minOccurs="0"/>
+<xs:element name="cep" type="xs:string" minOccurs="0"/>
+<xs:element name="cpfAtual" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="atualizarMedicoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

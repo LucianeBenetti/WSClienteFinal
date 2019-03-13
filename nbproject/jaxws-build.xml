@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-MedicoDAO" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MedicoDAO"/>
+        <property name="wsdl-MedicoDAO" location="xml-resources/web-service-references/MedicoDAO/wsdl/localhost_8080/WSLucianeServidor/MedicoDAO.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MedicoDAO" destdir="${build.generated.dir}/jax-wsCache/MedicoDAO" wsdl="${wsdl-MedicoDAO}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/WSLucianeServidor/MedicoDAO?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-MedicoDAO}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MedicoDAO"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MedicoDAO">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MedicoDAO" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/MedicoDAO"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/dao"/>
+    </target>
+    <target name="wsimport-client-EspecializacaoDAO" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EspecializacaoDAO"/>
+        <property name="wsdl-EspecializacaoDAO" location="xml-resources/web-service-references/EspecializacaoDAO/wsdl/localhost_8080/WSLucianeServidor/EspecializacaoDAO.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EspecializacaoDAO" destdir="${build.generated.dir}/jax-wsCache/EspecializacaoDAO" wsdl="${wsdl-EspecializacaoDAO}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/WSLucianeServidor/EspecializacaoDAO?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-EspecializacaoDAO}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EspecializacaoDAO"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EspecializacaoDAO">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EspecializacaoDAO" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/EspecializacaoDAO"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/dao"/>
+    </target>
+    <target name="wsimport-client-LocalEspDAO" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/LocalEspDAO"/>
+        <property name="wsdl-LocalEspDAO" location="xml-resources/web-service-references/LocalEspDAO/wsdl/localhost_8080/WSLucianeServidor/LocalEspDAO.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/LocalEspDAO" destdir="${build.generated.dir}/jax-wsCache/LocalEspDAO" wsdl="${wsdl-LocalEspDAO}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/WSLucianeServidor/LocalEspDAO?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-LocalEspDAO}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/LocalEspDAO"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/LocalEspDAO">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-LocalEspDAO" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/LocalEspDAO"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/dao"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-MedicoDAO, wsimport-client-EspecializacaoDAO, wsimport-client-LocalEspDAO"/>
+</project>
